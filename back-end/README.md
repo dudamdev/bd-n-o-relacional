@@ -28,8 +28,17 @@ PROJETO BACK-END
 
 * Instale a extensão Prisma no VSCode
 
+## Adicionando o Prisma Client ao projeto
+
+`npm install @prisma/client`
+
 ## Gerando o cliente do Prisma
 
 `npx prisma generate`
 
 * Precisa ser executado **toda vez** que o arquivo `schema.prisma` for alterado
+
+## Exibindo os dados cadastrados com o Prisma Studio
+`npx prisma studio`
+
+Deve ser executado em um segundo terminal, enquanto o projeto está sendo executado no primeiro.
