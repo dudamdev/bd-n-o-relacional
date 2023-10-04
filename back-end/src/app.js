@@ -5,8 +5,6 @@ import logger from "morgan";
 import indexRouter from "./routes/index.js";
 import usersRouter from "./routes/users.js";
 
-
-
 const app = express();
 
 app.use(logger("dev"));
@@ -17,18 +15,19 @@ app.use(cookieParser());
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
-/*************************************/
+/*********************************************/
 // ROTAS DA APLICAÇÃO BACK-END
-import cursoRoute from "./routes/curso.js";
-app.use("/curso", cursoRoute);
 
-import professorRoute from "./routes/professor.js";
-app.use("/professor", professorRoute);
+import cursoRoute from './routes/curso.js'
+app.use('/curso', cursoRoute)
 
-import turmaRoute from "./routes/turma.js";
-app.use("/turma", turmaRoute);
+import professorRoute from './routes/professor.js'
+app.use('/professor', professorRoute)
 
-import alunoRoute from "./routes/aluno.js";
-app.use("/aluno", alunoRoute);
+import alunoRoute from './routes/aluno.js'
+app.use('/aluno', alunoRoute)
+
+import turmaRoute from './routes/turma.js'
+app.use('/turma', turmaRoute)
 
 export default app;
